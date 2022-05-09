@@ -1,0 +1,126 @@
+:root{
+    --veryDarkBlue: #111827;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: -webkit-linear-gradient(to right, #141e30, #243b55); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: underline coral;
+}
+.glassmorphism-effect {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 08px32px0rgba (31, 38, 135, 0.37);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Header */
+.Header{
+    width: 100%;
+    padding: 20px;
+}
+.Header--list{
+    display: none;
+}
+
+/*Main */
+
+.Main__container{
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Home section */
+.Home__section{
+    width:100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Home__title{
+    font-family: 'Rubik', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+/*Nav Mobile*/
+
+.Mobile__bar{
+    width: 100%;
+    height: 8vh;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+}
+.Mobile--list{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.Mobile__moon{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.Mobile__bar i{
+    cursor: pointer;
+    color: white;
+}
+.Mobile__bar i:hover {
+    transform: scale(1.4);
+    transition: transform 0.5s;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    height: 10vh;
+}
+
+@media (min-width:600px) {
+    .Mobile__bar{
+        display: none;
+    }
+    .Header{
+        width: 4%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+    }
+    .Header--list{
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .Main__container{
+        width: 96%;
+    }
+}
