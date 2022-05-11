@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JulianDev</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,12 +14,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         data-href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&amp;family=Raleway:wght@400;600&amp;display=swap">
+    <link rel="shortcut icon" href="assets/img/logo-2.png" type="image/x-icon">
 </head>
 
 <body>
-    <header class="Header glassmorphism-effect">
+    <header class="Header">
         <picture class="Header--img">
-            <img src="./assets/img/logo-2.png" alt="logo julian">
+            <source media="(min-width:960px )" srcset="./assets/img/logo-2.png">
+            <img src="./assets/img/logo.png" alt="logo julian">
         </picture>
         <nav class="Header--nav">
             <ul class="Header--list">
@@ -55,46 +57,62 @@
                 <!-- <figure>
                     <img src=""  loading="lazy"alt="profile iamge">
                 </figure> -->
-                <p class="Home__text">Hello there I'm</p>
+                <p class="Home__text">¡Hello there!, I'm</p>
                 <h1 class="Home__title">Julian Franco</h1>
-                <p>I'm Frontend developer from Colombia</p>
+                <p class="Home__text--description"> I'm Frontend developer</p>
+                <a class="Home__redirect" href="about">About me</a>
+                <a class="Home__redirect" href="about">Projects</a>
             </div>
-            <a href="#about"><i class="fa-solid fa-arrow-down"></i></a>
+            <button class="Home__arrow">
+                <a href="#about"><i class="fa-solid fa-lg fa-arrow-down"></i></a>
+            </button>
         </section>
+        <section class="About__section">
+            <picture>
+                <img src="" alt="julian-image">
+            </picture>
+            <div class="About__info">
+                <ul>
+                    <li>About me</li>
+                    <li>Skills</li>
+                </ul>
+            </div>
+        </section>
+        <div id="mobileNav" class="Mobile__bar glassmorphism-effect">
+            <ul class="Mobile--list">
+                <li>
+                    <a href="#home">
+                        <i class="fa-solid fa-lg fa-house"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/julian1david">
+                        <i class="fa-brands  fa-lg fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/julian1david/">
+                        <i class="fa-brands fa-lg fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/julian1david">
+                        <i class="fa-brands fa-lg fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <button type="button" id="toggle" class="Mobile__moon">
+                        <i class="fa-solid fa-2xl fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
     </main>
     <footer>
         <p class="footer__title">Made with ❤ by @ juliandev</p>
         <p class="footer__description">© Copyright 2022</p>
     </footer>
-    <div id="mobileNav" class="Mobile__bar glassmorphism-effect">
-        <ul class="Mobile--list">
-            <li>
-                <a href="#home">
-                    <i class="fa-solid fa-lg fa-house"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/julian1david">
-                    <i class="fa-brands  fa-lg fa-twitter"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/julian1david/">
-                    <i class="fa-brands fa-lg fa-linkedin"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/julian1david">
-                    <i class="fa-brands fa-lg fa-github"></i>
-                </a>
-            </li>
-            <li>
-                <button type="button" id="toggle" class="Mobile__moon">
-                    <i class="fa-solid fa-xl fa-moon"></i>
-                </button>
-            </li>
-        </ul>
-    </div>
+    
 </body>
 
 </html>

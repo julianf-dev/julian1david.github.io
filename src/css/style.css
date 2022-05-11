@@ -1,27 +1,28 @@
 :root{
     --veryDarkBlue: #111827;
+    --veryLight: #ffffff;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body{
     background: -webkit-linear-gradient(to right, #141e30, #243b55); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #141e30, #243b55);
-    color: white;
+    color: var(--veryLight);
     font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
 }
 ul {
     list-style: none;
 }
 a{
     text-decoration: none;
-    color: white;
+    color: var(--veryLight);
 }
-a:hover{
-    text-decoration: underline coral;
-}
+
 .glassmorphism-effect {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 08px32px0rgba (31, 38, 135, 0.37);
@@ -32,42 +33,77 @@ a:hover{
 
 /* Header */
 .Header{
+    backdrop-filter: blur(4px);
     width: 100%;
     padding: 20px;
+    text-align: center;
+    position: fixed;
+
 }
 .Header--list{
     display: none;
 }
+
 
 /*Main */
 
 .Main__container{
     width: 100%;
     margin: 0 auto;
-    margin-left: 40px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 /*Home section */
 .Home__section{
+    display: flex;
+    flex-direction: column;
+}
+.Home__section{
     width:100%;
-    height: 70vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
+    position: relative;
 }
 .Home__title{
     font-family: 'Rubik', sans-serif;
-    font-size: 3.5rem;
+    font-size: 4.8rem;
     font-weight: 700;
+    line-height: 4.5rem;
+    margin: 20px auto;
 }
+.Home__text--description{
+    margin-bottom: 40px;
+}
+.Home__redirect{
+    margin-right: 10px;
+    font-size: 0.8rem;
+    border: 1px solid var(--veryLight);
+    padding: 10px;
+}
+.Home__redirect:hover{
+    box-shadow: 1px 2px 2px 1px var(--veryLight);
+}
+.Home__arrow{
+    background-color: transparent;
+    cursor: pointer;
+    align-self: center;
+    position: absolute;
+    bottom: 100px;
+    padding: 8px;
+    border: 1px solid var(--veryLight);
+    border-radius: 50%;
+    transition: transform 0.3s ease 0s;
+}
+.Home__arrow:hover{
+    transform: scale(0.9);
+}
+
+
 /*Nav Mobile*/
 
 .Mobile__bar{
     width: 100%;
-    height: 8vh;
     padding: 20px;
     position: fixed;
     bottom: 0;
@@ -79,30 +115,39 @@ a:hover{
     justify-content: space-between;
 }
 .Mobile__moon{
+    text-align: center;
     background-color: transparent;
-    border: none;
-    color: white;
+    color: var(--veryLight);
     cursor: pointer;
+    border: none;
 }
 .Mobile__bar i{
     cursor: pointer;
-    color: white;
+    color: var(--veryLight);
 }
-.Mobile__bar i:hover {
+.Mobile__bar i:hover{
     transform: scale(1.4);
     transition: transform 0.5s;
 }
 
+
+/* Footer */
 footer{
     width: 100%;
     text-align: center;
-    height: 10vh;
 }
 
-@media (min-width:600px) {
+@media (min-width:960px) {
+
+
     .Mobile__bar{
         display: none;
     }
+    .Main__container{
+        width: 94%;
+        margin-left: 6%;
+    }
+    /*In desktop add glassmorphism-effect with js*/
     .Header{
         width: 4%;
         display: flex;
@@ -111,8 +156,6 @@ footer{
         justify-content: space-between;
         align-items: center;
         padding: 20px;
-        position: absolute;
-        top: 0;
     }
     .Header--list{
         height: 200px;
@@ -120,7 +163,7 @@ footer{
         flex-direction: column;
         justify-content: space-between;
     }
-    .Main__container{
-        width: 96%;
+    .Home__title{
+        font-size: 7.5rem;
     }
 }
