@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Globales */
+
+html{
+    font-size: 62.5%;
+}
+body{
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 2.0rem;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

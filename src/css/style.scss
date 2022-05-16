@@ -1,0 +1,137 @@
+$veryDarkBlue: #111827;
+$veryLight: #ffffff;
+
+
+/*glassmorphism effect*/
+
+.glassmorphism-effect {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 08px32px0rgba (31, 38, 135, 0.37);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Header */
+.Header{
+    backdrop-filter: blur(4px);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    &__list{
+        display: none;
+    }
+
+}
+
+/*Main */
+
+/*Home section */
+.Home{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    &__title{
+        font-size: 7rem;
+        font-weight: 700;
+        padding: 2rem;
+    }
+    &__description{
+        margin-bottom: 4rem;
+    }
+    &__redirect{
+        margin-right: 10px;
+        border: 1px solid $veryLight;
+        padding: 1rem;
+        &:hover{
+            box-shadow: 0px 0px 4px 2px $veryLight;
+        }
+    }
+    &__arrow{
+        background-color: transparent;
+        align-self: center;
+        position: absolute;
+        bottom: 100px;
+        padding: 8px;
+        border: 1px solid $veryLight;
+        border-radius: 50%;
+        transition: transform 0.3s ease 0s;
+        &:hover{
+            transform: scale(0.9);
+        }
+    }
+}
+
+.About{
+    align-items: center;
+}
+
+
+/*Nav Mobile*/
+
+.NavMobile{
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    &__list{
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__moon{
+        text-align: center;
+        background-color: transparent;
+        border: none;
+    }
+    & i{
+        color: $veryLight;
+        &:hover{
+            transform: scale(1.4);
+            transition: transform 0.5s;
+        }
+    }
+}
+
+
+/* Footer */
+footer{
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width:960px) {
+
+
+    .NavMobile{
+        display: none;
+    }
+    .Main__container{
+        width: 94%;
+        margin-left: 6%;
+    }
+    /*In desktop add glassmorphism-effect with js*/
+    .Header{
+        width: 4%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    .Header--list{
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .Home__title{
+        font-size: 7.5rem;
+    }
+}
