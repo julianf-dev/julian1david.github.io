@@ -1,30 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/*Globales */
-html {
-  font-size: 62.5%;
-}
-
-body {
-  background: linear-gradient(to right, #141e30, #243b55);
-  color: #ffffff;
-  font-family: "Roboto Flex", sans-serif;
-  font-size: 2rem;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
 /*glassmorphism effect*/
 .glassmorphism-effect {
   background: rgba(255, 255, 255, 0.1);
@@ -36,64 +9,65 @@ a {
 
 /* Header */
 .Header {
-  backdrop-filter: blur(4px);
   width: 100%;
   padding: 20px;
   text-align: center;
   position: fixed;
 }
-.Header__list {
-  display: none;
+.Header__nav {
+  visibility: hidden;
 }
 
 /*Main */
 /*Home section */
 .Home {
   width: 100%;
+  height: 660px;
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
-  position: relative;
+  padding-left: 20px;
+  background: linear-gradient(to bottom, #34e89e, #0f3443);
 }
 .Home__title {
-  font-size: 7rem;
-  font-weight: 700;
-  padding: 2rem;
+  font-size: 6rem;
+  padding: 2rem 0;
 }
 .Home__description {
   margin-bottom: 4rem;
 }
 .Home__redirect {
+  color: #08fdd8;
   margin-right: 10px;
-  border: 1px solid #ffffff;
-  padding: 1rem;
+  border: 1px solid #08fdd8;
+  padding: 0.8rem;
 }
 .Home__redirect:hover {
-  box-shadow: 0px 0px 4px 2px #ffffff;
+  transition: 0.3s ease-out all;
+  transform: skewX(-10deg);
+  background-color: #08fdd8;
+  color: black;
 }
 .Home__arrow {
   background-color: transparent;
   align-self: center;
   position: absolute;
-  bottom: 100px;
-  padding: 8px;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
+  bottom: 60px;
+  font-size: 2rem;
   transition: transform 0.3s ease 0s;
 }
-.Home__arrow:hover {
-  transform: scale(0.9);
+.Home__arrow:hover i {
+  transform: scale(1.2);
 }
 
 .About {
-  align-items: center;
+  height: 660px;
 }
 
 /*Nav Mobile*/
 .NavMobile {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   position: fixed;
   bottom: 0;
 }
@@ -124,34 +98,26 @@ footer {
 
 @media (min-width: 960px) {
   .NavMobile {
-    display: none;
-  }
-
-  .Main__container {
-    width: 94%;
-    margin-left: 6%;
+    visibility: hidden;
   }
 
   /*In desktop add glassmorphism-effect with js*/
   .Header {
-    width: 4%;
+    width: 100%;
+    padding: 10px 60px;
+    height: 60px;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
   }
-
-  .Header--list {
-    height: 200px;
+  .Header__list {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
-
-  .Home__title {
+  .Header__title {
     font-size: 7.5rem;
+  }
+  .Header__nav {
+    visibility: visible;
   }
 }
 

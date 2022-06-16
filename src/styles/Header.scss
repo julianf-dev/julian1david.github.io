@@ -1,0 +1,66 @@
+@use './style.scss' as *;
+
+/* Header */
+.Header{
+    width: 100%;
+    padding: 60px;
+    text-align: center;
+    position: fixed;
+    &__nav{
+        visibility: hidden;
+    }
+}
+
+/*Nav Mobile*/
+
+.NavMobile{
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    &__list{
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__moon{
+        text-align: center;
+        background-color: transparent;
+        border: none;
+    }
+    & i{
+        color: $veryLight;
+        &:hover{
+            transform: scale(1.4);
+            transition: transform 0.5s;
+        }
+    }
+}
+
+
+@media (min-width:960px) {
+
+    .Header{
+        width: 100%;
+        padding: 1.6rem 6rem;
+        height: 6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__list{
+            display: flex;
+        }
+        &__title{
+            font-size: 7.5rem;
+        }
+        &__nav{
+            visibility: visible;
+        }
+    }
+
+    .NavMobile{
+        visibility: hidden;
+    }
+    
+}

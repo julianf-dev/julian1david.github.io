@@ -1,0 +1,62 @@
+$veryDarkBlue: #1d1d1d;
+$veryLight: #ffffff;
+$color-title: #35b0bf;
+$greenLight: #08fdd8;
+
+
+
+/*Home section */
+.Home{
+    width:100%;
+    height: 660px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    background: linear-gradient(to bottom, #34e89e, #0f3443);
+    &__title{
+        font-size: 6rem;
+        padding: 2rem 0;
+    }
+    &__description{
+        margin-bottom: 4rem;
+    }
+    &__redirect{
+        color: $greenLight;
+        margin-right: 10px;
+        border: 1px solid $greenLight;
+        padding: 0.8rem;
+        &:hover{
+            transition: 0.3s ease-out all;
+            transform: skewX(-10deg);
+            background-color: $greenLight;
+            color: black;
+        }
+    }
+    &__arrow{
+        background-color: transparent;
+        align-self: center;
+        position: absolute;
+        bottom: 60px;
+        font-size: 2rem;
+        transition: transform 0.3s ease 0s;
+        &:hover i{
+            transform: scale(1.2);
+        }
+    }
+}
+
+.About{
+    height: 660px;
+
+}
+
+
+
+
+
+/* Footer */
+footer{
+    width: 100%;
+    text-align: center;
+}

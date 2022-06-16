@@ -10,10 +10,10 @@ html{
     font-size: 62.5%;
 }
 body{
-    background: linear-gradient(to right, #141e30, #243b55);
+    background: #1d1d1d;
     color: white;
-    font-family: 'Roboto Flex', sans-serif;
-    font-size: 2.0rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8rem;
 }
 ul {
     list-style: none;
