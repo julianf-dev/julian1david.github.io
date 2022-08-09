@@ -1,124 +1,124 @@
 /*glassmorphism effect*/
 .glassmorphism-effect {
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 8px32px0rgba 31, 38, 135, 0.37;
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 8px32px0rgba 31, 38, 135, 0.37;
+	-webkit-backdrop-filter: blur(4px);
+	backdrop-filter: blur(4px);
+	border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* Header */
 .Header {
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  position: fixed;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	position: fixed;
 }
 .Header__nav {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 /*Main */
 /*Home section */
 .Home {
-  width: 100%;
-  height: 660px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 20px;
-  background: linear-gradient(to bottom, #34e89e, #0f3443);
+	width: 100%;
+	height: 660px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 20px;
+	background: linear-gradient(to bottom, #34e89e, #0f3443);
 }
 .Home__title {
-  font-size: 6rem;
-  padding: 2rem 0;
+	font-size: 6rem;
+	padding: 2rem 0;
 }
 .Home__description {
-  margin-bottom: 4rem;
+	margin-bottom: 4rem;
 }
 .Home__redirect {
-  color: #08fdd8;
-  margin-right: 10px;
-  border: 1px solid #08fdd8;
-  padding: 0.8rem;
+	color: #08fdd8;
+	margin-right: 10px;
+	border: 1px solid #08fdd8;
+	padding: 0.8rem;
 }
 .Home__redirect:hover {
-  transition: 0.3s ease-out all;
-  transform: skewX(-10deg);
-  background-color: #08fdd8;
-  color: black;
+	transition: 0.3s ease-out all;
+	transform: skewX(-10deg);
+	background-color: #08fdd8;
+	color: black;
 }
 .Home__arrow {
-  background-color: transparent;
-  align-self: center;
-  position: absolute;
-  bottom: 60px;
-  font-size: 2rem;
-  transition: transform 0.3s ease 0s;
+	background-color: transparent;
+	align-self: center;
+	position: absolute;
+	bottom: 60px;
+	font-size: 2rem;
+	transition: transform 0.3s ease 0s;
 }
 .Home__arrow:hover i {
-  transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .About {
-  height: 660px;
+	height: 660px;
 }
 
 /*Nav Mobile*/
 .NavMobile {
-  width: 100%;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
+	width: 100%;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
 }
 .NavMobile__list {
-  margin: 0 auto;
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
+	margin: 0 auto;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
 }
 .NavMobile__moon {
-  text-align: center;
-  background-color: transparent;
-  border: none;
+	text-align: center;
+	background-color: transparent;
+	border: none;
 }
 .NavMobile i {
-  color: #ffffff;
+	color: #ffffff;
 }
 .NavMobile i:hover {
-  transform: scale(1.4);
-  transition: transform 0.5s;
+	transform: scale(1.4);
+	transition: transform 0.5s;
 }
 
 /* Footer */
 footer {
-  width: 100%;
-  text-align: center;
+	width: 100%;
+	text-align: center;
 }
 
 @media (min-width: 960px) {
-  .NavMobile {
-    visibility: hidden;
-  }
+	.NavMobile {
+		visibility: hidden;
+	}
 
-  /*In desktop add glassmorphism-effect with js*/
-  .Header {
-    width: 100%;
-    padding: 10px 60px;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .Header__list {
-    display: flex;
-  }
-  .Header__title {
-    font-size: 7.5rem;
-  }
-  .Header__nav {
-    visibility: visible;
-  }
+	/*In desktop add glassmorphism-effect with js*/
+	.Header {
+		width: 100%;
+		padding: 10px 60px;
+		height: 60px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.Header__list {
+		display: flex;
+	}
+	.Header__title {
+		font-size: 7.5rem;
+	}
+	.Header__nav {
+		visibility: visible;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

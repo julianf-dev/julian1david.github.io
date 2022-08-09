@@ -1,33 +1,32 @@
 @import './vars';
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* Global */
 
-html{
-    font-size: 62.5%;
+html {
+	font-size: 62.5%;
 }
 
-body{
-    background: $dark;
-    color: white;
-    font-family: $open-sans;
-    font-size: 1.8rem;
+body {
+	color: white;
+	font-family: $open-sans;
+	font-size: 1.8rem;
 }
 
 ul {
-    list-style: none;
+	list-style: none;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+a {
+	text-decoration: none;
+	color: white;
 }
 
-#root{
-    height: 100%;
+#root {
+	height: 100%;
 }
