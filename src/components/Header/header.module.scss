@@ -1,7 +1,7 @@
-@use './style.scss' as *;
+@import '../../styles/vars';
 
 /* Header */
-.Header{
+.header{
     width: 100%;
     padding: 60px;
     text-align: center;
