@@ -1,8 +1,19 @@
-import { Header } from '../components/Header';
+import { Route, Routes } from 'react-router-dom';
 import { Layout } from '../components/Layout';
+import { Home } from '@/Pages/Home';
+import { About } from '@/Pages/About';
+import { Projects } from '@/Pages/Projects';
 
-const App = () => {
-	return <Layout />;
-};
+function App() {
+	return (
+		<Layout>
+			<Routes>
+				<Route path='/' exact element={<Home />} />
+				<Route path='/about-me' element={<About />} />
+				<Route path='/projects' element={<Projects />} />
+			</Routes>
+		</Layout>
+	);
+}
 
 export default App;

@@ -1,16 +1,14 @@
-import { Header } from "../Header"
+import { Header } from '../Header';
 
-import classes from './Layout.module.scss'
+import style from './Layout.module.scss';
 
 const Layout = ({ children }) => {
-  return (
-    <>
-        <Header/>
-        <div className={classes.container}>
-            {children}
-        </div>
-    </>
-  )
-}
+	return (
+		<>
+			<Header />
+			<div className={style.container}>{children}</div>
+		</>
+	);
+};
 
-export  { Layout }
+export { Layout };
