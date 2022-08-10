@@ -2,22 +2,24 @@
 $open-sans: 'Open Sans', sans-serif;
 
 /* Colors */
-$dark: #1d1d1d;
+$dark: rgb(29, 29, 29);
 $ligth: #ffffff;
+$primary: rgb(162, 162, 256);
+$bg: rgb(244, 244, 255);
 $color-title: #35b0bf;
 $greenLight: #08fdd8;
 
 /* Spacing */
 
-$spacing-md: 1.6rem;
-$spacing-lg: 3.2rem;
+$spacing-md: 16px;
+$spacing-lg: 32px;
 
 /* Border-Radius */
 
-$border-radius: 1.2rem;
+$BorderRadius: 12px;
 
-/* Header-Higth */
-$header-hight: 60px;
+/* Header-height */
+$header-height: 60px;
 
 @mixin breakpoint($point) {
 	@if $point == md {
