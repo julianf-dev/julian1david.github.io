@@ -9,10 +9,9 @@ import style from './Header.module.scss';
 import { BiAlignRight } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-	const navigate = useNavigate();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [size, setSize] = useState({
 		width: undefined,
@@ -41,10 +40,6 @@ const Header = () => {
 		}
 	}, [size.width, menuOpen]);
 
-	const ctaClickHandler = () => {
-		menuHandler();
-		navigate('/about-me');
-	};
 
 	return (
 		<header className={style.header}>
@@ -59,6 +54,18 @@ const Header = () => {
 				>
 					<ul>
 						<li>
+							{/* Use slash before # couse not affect another components */}
+							<Link to='/' onClick={menuHandler}>
+								Home
+							</Link>
+						</li>
+						<li>
+							{/* Use slash before # couse not affect another components */}
+							<a href='/#projects' onClick={menuHandler}>
+								Projects
+							</a>
+						</li>
+						<li>
 							<Link to='/about-me' onClick={menuHandler}>
 								About me
 							</Link>
@@ -68,7 +75,6 @@ const Header = () => {
 								Projects
 							</Link>
 						</li>
-						<button onClick={ctaClickHandler}>Return</button>
 					</ul>
 				</nav>
 				<div className={style.header__content__toggle}>

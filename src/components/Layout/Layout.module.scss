@@ -1,11 +1,8 @@
 @import '../../styles/vars';
 
 .container {
-	height: calc(100vh - #{$header-height});
+	width: 100%;
 	background: $bg;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
 	h1 {
 		padding: 1.5rem 2.5rem;

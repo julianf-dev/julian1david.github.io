@@ -1,5 +1,13 @@
+import { About } from '../About';
+import { Projects } from '../Projects';
+
 const Home = () => {
-	return <h1>index</h1>;
+	return (
+		<>
+			<About />
+			<Projects />
+		</>
+	);
 };
 
 export { Home };
