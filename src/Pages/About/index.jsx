@@ -1,5 +1,9 @@
 const About = () => {
-	return <h1>About me</h1>;
+	return (
+		<div>
+			<h1>About me</h1>
+		</div>
+	);
 };
 
 export { About };
