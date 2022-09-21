@@ -18,6 +18,7 @@ const About = () => {
 					I am in charge of the HelpDesk area, user service, and requirements
 					solutions and interested in expanding my training as developer.
 				</p>
+				<h1 className='text-3xl font-bold underline'>Hello world!</h1>
 			</div>
 		</section>
 	);
