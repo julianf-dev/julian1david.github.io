@@ -3,7 +3,7 @@
 .projects {
 	transform: translate(0);
 	transition: 1s ease all transform;
-	height: 100vh;
+	height: calc(100vh - #{$header-height});
 	&__title {
 		font-size: 3rem;
 		color: #333;

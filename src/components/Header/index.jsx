@@ -10,6 +10,7 @@ import { BiAlignRight } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Navbar } from '../Navbar/Index';
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -46,36 +47,7 @@ const Header = () => {
 				<Link to='/' className={style.header__content__logo}>
 					<Logo src={MediumLogo} alt={'Logo Julian'} srcSet={SmallLogo} />
 				</Link>
-				<nav
-					className={`${style.header__content__nav} ${
-						menuOpen && size.width < 768 ? style.isMenu : ''
-					}`}
-				>
-					<ul>
-						<li>
-							{/* Use slash before # couse not affect another components */}
-							<Link to='/' onClick={menuHandler}>
-								Home
-							</Link>
-						</li>
-						<li>
-							{/* Use slash before # couse not affect another components */}
-							<a href='/#projects' onClick={menuHandler}>
-								Projects
-							</a>
-						</li>
-						<li>
-							<Link to='/about-me' onClick={menuHandler}>
-								About me
-							</Link>
-						</li>
-						<li>
-							<Link to='/projects' onClick={menuHandler}>
-								Projects
-							</Link>
-						</li>
-					</ul>
-				</nav>
+				<Navbar isMenu={menuOpen} size={size} menuHandler={menuHandler}/>
 				<div className={style.header__content__toggle}>
 					{!menuOpen ? (
 						<BiAlignRight onClick={menuHandler} />
