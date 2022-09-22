@@ -1,15 +1,12 @@
 import { Link } from 'react-router-dom';
 import style from './Navbar.module.scss';
 
-const Navbar = (menuOpen, size, menuHandler) => {
+const Navbar = (menuOpen, menuHandler) => {
 	return (
 		
 		<nav
-			className={`${style.nav} ${menuOpen ? 'not' : 'hola'}`}
+			className={`${style.nav} ${menuOpen ?  style.isMenu : ''}`}
 		>
-		{
-			menuOpen ? 'text' : 'test'
-		}
 			<ul>
 				<li>
 					{/* Use slash before # couse not affect another components */}

@@ -11,7 +11,7 @@ const About = () => {
 				className={style.container__image}
 			/>
 			<div className={style.container__profile}>
-				<h1 className={style.container__profile_title}>Hi I&apos;m Julian, Frontend Developer</h1>
+				<h2 className={style.container__profile_title}>Hi I&apos;m Julian, Frontend Developer</h2>
 				<p className={style.container__profile_info}>
 					I am in charge of the HelpDesk area, user service, and requirements
 					solutions and interested in expanding my training as developer.
