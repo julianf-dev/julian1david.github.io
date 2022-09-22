@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { Navbar } from '../Navbar/Index';
 
 const Header = () => {
-	const [menuOpen, setMenuOpen] = useState(false);
+
 	const [size, setSize] = useState({
 		width: undefined,
 		height: undefined,
@@ -47,7 +47,6 @@ const Header = () => {
 				<Link to='/' className={style.header__content__logo}>
 					<Logo src={MediumLogo} alt={'Logo Julian'} srcSet={SmallLogo} />
 				</Link>
-				<Navbar isMenu={menuOpen} size={size} menuHandler={menuHandler}/>
 				<div className={style.header__content__toggle}>
 					{!menuOpen ? (
 						<BiAlignRight onClick={menuHandler} />
@@ -55,6 +54,7 @@ const Header = () => {
 						<AiOutlineClose onClick={menuHandler} />
 					)}
 				</div>
+				<Navbar menuOpen={menuOpen} size={size} menuHandler={menuHandler}/>
 			</div>
 		</header>
 	);
