@@ -1,20 +1,20 @@
 @import '../../styles/vars';
 
-.projects{
-    transform: translate(0);
+.projects {
+	transform: translate(0);
 	transition: 1s ease all transform;
-    height:100vh;
-    &__title{
-        font-size: 3rem;
-        color: #333;
-        font-weight: bolder;
-        text-align: center;
-        margin-bottom: 50px;
-    }
-    &__container{
-        display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(auto-fit, 150px);
-        gap: 20px;
-    }
+	height: 100vh;
+	&__title {
+		font-size: 3rem;
+		color: #333;
+		font-weight: bolder;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	&__container {
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(auto-fit, 150px);
+		gap: 20px;
+	}
 }

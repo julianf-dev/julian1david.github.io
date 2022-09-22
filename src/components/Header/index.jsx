@@ -40,7 +40,6 @@ const Header = () => {
 		}
 	}, [size.width, menuOpen]);
 
-
 	return (
 		<header className={style.header}>
 			<div className={style.header__content}>
