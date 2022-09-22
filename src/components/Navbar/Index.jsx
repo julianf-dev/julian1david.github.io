@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import style from './Navbar.module.scss';
 
-const Navbar = (menuOpen, menuHandler) => {
+const Navbar = (menuOpen, size, menuHandler) => {
+	console.log(menuOpen);
 	return (
-		
 		<nav
-			className={`${style.nav} ${menuOpen ?  style.isMenu : ''}`}
+			className={`${style.nav} 
+			${menuOpen && size.width < 768 ? style.isMenu : ''}`}
 		>
 			<ul>
 				<li>

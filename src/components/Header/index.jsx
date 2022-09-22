@@ -13,9 +13,7 @@ import { Link } from 'react-router-dom';
 import { Navbar } from '../Navbar/Index';
 
 const Header = () => {
-
 	const [menuOpen, setMenuOpen] = useState(false);
-
 
 	const [size, setSize] = useState({
 		width: undefined,
@@ -50,7 +48,7 @@ const Header = () => {
 				<Link to='/' className={style.header__content__logo}>
 					<Logo src={MediumLogo} alt={'Logo Julian'} srcSet={SmallLogo} />
 				</Link>
-				<Navbar menuOpen={menuOpen} size={size}/>
+				<Navbar menuOpen={menuOpen} size={size} />
 				<div className={style.header__content__toggle}>
 					{!menuOpen ? (
 						<BiAlignRight onClick={menuHandler} />

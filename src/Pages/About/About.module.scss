@@ -19,7 +19,7 @@
 		width: calc(100vw - 20%);
 		&_title {
 			text-align: center;
-			padding: 0.4rem 	;
+			padding: 0.4rem;
 			min-width: 360px;
 			background: linear-gradient(220deg, $primary, rgba($primary, 0.5));
 			border-radius: $BorderRadius calc(#{$BorderRadius} * 10);
@@ -33,12 +33,11 @@
 	}
 }
 
-
 @media (min-width: 960px) {
-	.nav{
+	.nav {
 		&__profile {
 			width: calc(100vw - 50%);
-			&_title{
+			&_title {
 				padding: 1.5rem 1.5rem;
 			}
 		}
