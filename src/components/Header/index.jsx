@@ -8,21 +8,26 @@ import style from './Header.module.scss';
 
 import { BiAlignRight } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar } from '../Navbar/Index';
+import useModal from '../../hooks/useModal';
 
 const Header = () => {
-	const [menuOpen, setMenuOpen] = useState(false);
+	
+	const { states, stateUpdaters } = useModal();
 
-	const [size, setSize] = useState({
-		width: undefined,
-		height: undefined,
-	});
+	const {
+		menuOpen,
+		size
+	} = states;
 
-	const menuHandler = () => {
-		setMenuOpen(p => !p);
-	};
+
+	const {
+		setMenuOpen,
+		setSize,
+		menuHandler
+	} = stateUpdaters;
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -48,7 +53,7 @@ const Header = () => {
 				<Link to='/' className={style.header__content__logo}>
 					<Logo src={MediumLogo} alt={'Logo Julian'} srcSet={SmallLogo} />
 				</Link>
-				<Navbar menuOpen={menuOpen} size={size} />
+				<Navbar menu={menuOpen} size={size} />
 				<div className={style.header__content__toggle}>
 					{!menuOpen ? (
 						<BiAlignRight onClick={menuHandler} />
