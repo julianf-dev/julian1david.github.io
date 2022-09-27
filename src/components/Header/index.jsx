@@ -14,20 +14,11 @@ import { Navbar } from '../Navbar/Index';
 import useModal from '../../hooks/useModal';
 
 const Header = () => {
-	
 	const { states, stateUpdaters } = useModal();
 
-	const {
-		menuOpen,
-		size
-	} = states;
+	const { menuOpen, size } = states;
 
-
-	const {
-		setMenuOpen,
-		setSize,
-		menuHandler
-	} = stateUpdaters;
+	const { setMenuOpen, setSize, menuHandler } = stateUpdaters;
 
 	useEffect(() => {
 		const handleResize = () => {

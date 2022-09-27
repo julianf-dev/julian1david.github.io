@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import style from './Navbar.module.scss';
 
-const Navbar = ( { menu, size, menuHandler }) => {
-
+const Navbar = ({ menu, size, menuHandler }) => {
 	return (
 		<nav
 			className={`${style.nav} 
