@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 
@@ -11,7 +12,12 @@ import { initFlowbite } from 'flowbite';
 export class AppComponent {
   title = 'portafolio';
 
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit(): void {
-    initFlowbite();
+    if (isPlatformBrowser(this.platformId)) {
+      initFlowbite();
+    }
   }
 }
